@@ -7,6 +7,9 @@ mod macros;
 pub mod complete;
 pub mod streaming;
 
+#[cfg(feature = "bitvec")]
+pub use bitvec;
+
 use crate::error::{ErrorKind, ParseError};
 use crate::internal::{Err, IResult, Needed};
 use crate::lib::std::ops::RangeFrom;
